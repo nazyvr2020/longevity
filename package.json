@@ -3,25 +3,39 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "concurrently \"bun:next:dev\" \"bun:slicemachine\" --names \"next,slicemachine\" --prefix-colors gray,magenta",
+    "next:dev": "next",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "slicemachine": "start-slicemachine",
+    "format": "prettier --write ."
   },
   "dependencies": {
+    "@prismicio/client": "latest",
+    "@prismicio/next": "latest",
+    "@prismicio/react": "latest",
+    "next": "latest",
     "react": "latest",
-    "react-dom": "latest",
-    "next": "latest"
+    "react-dom": "latest"
   },
   "devDependencies": {
-    "typescript": "latest",
-    "@types/react": "latest",
+    "@slicemachine/adapter-next": "latest",
+    "@tailwindcss/aspect-ratio": "latest",
+    "@tailwindcss/typography": "latest",
+    "clsx": "latest",
+    "concurrently": "latest",
+    "schema-dts": "latest",
+    "tailwind-merge": "latest",
     "@types/node": "latest",
+    "@types/react": "latest",
     "@types/react-dom": "latest",
     "autoprefixer": "latest",
-    "postcss": "latest",
-    "tailwindcss": "latest",
     "eslint": "latest",
-    "eslint-config-next": "latest"
+    "eslint-config-next": "latest",
+    "postcss": "latest",
+    "slice-machine-ui": "latest",
+    "tailwindcss": "latest",
+    "typescript": "latest"
   }
 }
