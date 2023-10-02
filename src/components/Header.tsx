@@ -13,7 +13,7 @@ export default async function Header() {
     <Section as="header" width="xl" className="p-6">
       <div className="flex items-center justify-between">
         <Link href="/">
-          <Logo className="" />
+          <Logo className="h-[50px]" />
           <span className="sr-only">Return to Homepage</span>
         </Link>
         <MobileMenu navigation={navigation} />

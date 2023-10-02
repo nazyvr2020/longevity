@@ -7,8 +7,7 @@ export default function Logo({ className }: LogoProps) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="271.216"
-      height="73.554"
+      viewBox="0 0 270 75"
       className={cn(className)}
     >
       <path fill="#AB7D3A" d="M121.924 25.49h149.293v2.975H121.924z"></path>
