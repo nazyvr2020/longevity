@@ -13,7 +13,7 @@ export default async function Footer() {
         'bg-color-primary text-color-base lg:text-lg border-b-[32px] border-b-color-secondary flex flex-col items-center pt-16 text-center'
       )}
     >
-      <FooterLogo className="inline" />
+      <FooterLogo className="inline h-[70px] lg:h-[100px]" />
       <PrismicRichText
         field={settings.data.footer_slogan}
         components={{

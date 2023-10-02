@@ -32,7 +32,7 @@ const Inspire = ({ slice, index }: InspireProps): JSX.Element => {
         </div>
         {(isFilled.richText(slice.primary.heading) ||
           isFilled.richText(slice.primary.text)) && (
-          <div className="mt-8">
+          <div className="mt-8 px-4">
             <PrismicRichText
               field={slice.primary.heading}
               components={{
@@ -89,7 +89,7 @@ const Inspire = ({ slice, index }: InspireProps): JSX.Element => {
             />
           )}
         </div>
-        <div className="mt-8">
+        <div className="mt-8 px-4">
           <PrismicRichText
             field={slice.primary.heading}
             components={{

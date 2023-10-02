@@ -7,8 +7,9 @@ export default function FooterLogo({ className }: FooterLogoProps) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="397.575"
-      height="107.823"
+      // width="397.575"
+      // height="107.823"
+      viewBox="0 0 397 107"
       className={cn(className)}
     >
       <g fill="#FFF">

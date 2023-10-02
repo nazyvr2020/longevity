@@ -18,7 +18,7 @@ const ImageWithText = ({ slice }: ImageWithTextProps): JSX.Element => {
   return (
     <Section
       width="xl"
-      className="py-16"
+      className="py-16 px-4 lg:px-0"
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
     >
@@ -30,7 +30,7 @@ const ImageWithText = ({ slice }: ImageWithTextProps): JSX.Element => {
         {isFilled.image(slice.primary.image) && (
           <PrismicNextImage
             field={slice.primary.image}
-            className={cn({
+            className={cn('my-6', {
               'order-2': slice.primary.image_location === true,
             })}
           />
