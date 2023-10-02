@@ -70,6 +70,79 @@ export type HomepageDocument<Lang extends string = string> =
     Lang
   >
 
+type PageDocumentDataSlicesSlice = ImageWithTextSlice | InspireSlice
+
+/**
+ * Content for Page documents
+ */
+interface PageDocumentData {
+  /**
+   * Title field in *Page*
+   *
+   * - **Field Type**: Title
+   * - **Placeholder**: *None*
+   * - **API ID Path**: page.title
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  title: prismic.TitleField
+
+  /**
+   * Slice Zone field in *Page*
+   *
+   * - **Field Type**: Slice Zone
+   * - **Placeholder**: *None*
+   * - **API ID Path**: page.slices[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#slices
+   */
+  slices: prismic.SliceZone<PageDocumentDataSlicesSlice>
+  /**
+   * Meta Description field in *Page*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: A brief summary of the page
+   * - **API ID Path**: page.meta_description
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  meta_description: prismic.KeyTextField
+
+  /**
+   * Meta Image field in *Page*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: page.meta_image
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  meta_image: prismic.ImageField<never>
+
+  /**
+   * Meta Title field in *Page*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: A title of the page used for social media and search engines
+   * - **API ID Path**: page.meta_title
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  meta_title: prismic.KeyTextField
+}
+
+/**
+ * Page document from Prismic
+ *
+ * - **API ID**: `page`
+ * - **Repeatable**: `true`
+ * - **Documentation**: https://prismic.io/docs/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type PageDocument<Lang extends string = string> =
+  prismic.PrismicDocumentWithUID<Simplify<PageDocumentData>, 'page', Lang>
+
 /**
  * Item in *Settings → Navigation*
  */
@@ -171,7 +244,86 @@ export type SettingsDocument<Lang extends string = string> =
     Lang
   >
 
-export type AllDocumentTypes = HomepageDocument | SettingsDocument
+export type AllDocumentTypes =
+  | HomepageDocument
+  | PageDocument
+  | SettingsDocument
+
+/**
+ * Primary content in *ImageWithText → Primary*
+ */
+export interface ImageWithTextSliceDefaultPrimary {
+  /**
+   * Image field in *ImageWithText → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: image_with_text.primary.image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image: prismic.ImageField<never>
+
+  /**
+   * Heading field in *ImageWithText → Primary*
+   *
+   * - **Field Type**: Title
+   * - **Placeholder**: Optional heading
+   * - **API ID Path**: image_with_text.primary.heading
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  heading: prismic.TitleField
+
+  /**
+   * Text field in *ImageWithText → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: Optionally write text
+   * - **API ID Path**: image_with_text.primary.text
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  text: prismic.RichTextField
+
+  /**
+   * Image Location field in *ImageWithText → Primary*
+   *
+   * - **Field Type**: Boolean
+   * - **Placeholder**: *None*
+   * - **Default Value**: false
+   * - **API ID Path**: image_with_text.primary.image_location
+   * - **Documentation**: https://prismic.io/docs/field#boolean
+   */
+  image_location: prismic.BooleanField
+}
+
+/**
+ * Default variation for ImageWithText Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type ImageWithTextSliceDefault = prismic.SharedSliceVariation<
+  'default',
+  Simplify<ImageWithTextSliceDefaultPrimary>,
+  never
+>
+
+/**
+ * Slice variation for *ImageWithText*
+ */
+type ImageWithTextSliceVariation = ImageWithTextSliceDefault
+
+/**
+ * ImageWithText Shared Slice
+ *
+ * - **API ID**: `image_with_text`
+ * - **Description**: ImageWithText
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type ImageWithTextSlice = prismic.SharedSlice<
+  'image_with_text',
+  ImageWithTextSliceVariation
+>
 
 /**
  * Primary content in *Inspire → Primary*
@@ -306,10 +458,17 @@ declare module '@prismicio/client' {
       HomepageDocument,
       HomepageDocumentData,
       HomepageDocumentDataSlicesSlice,
+      PageDocument,
+      PageDocumentData,
+      PageDocumentDataSlicesSlice,
       SettingsDocument,
       SettingsDocumentData,
       SettingsDocumentDataNavigationItem,
       AllDocumentTypes,
+      ImageWithTextSlice,
+      ImageWithTextSliceDefaultPrimary,
+      ImageWithTextSliceVariation,
+      ImageWithTextSliceDefault,
       InspireSlice,
       InspireSliceDefaultPrimary,
       InspireSliceVideoPrimary,
