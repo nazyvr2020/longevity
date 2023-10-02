@@ -5,6 +5,7 @@ import { clsx } from 'clsx'
 import { PrismicPreview } from '@prismicio/next'
 import { createClient, repositoryName } from '@/prismicio'
 import * as prismic from '@prismicio/client'
+import Footer from '@/components/Footer'
 
 /**
  * Heading & Body fonts
@@ -54,6 +55,7 @@ export default function RootLayout({
         )}
       >
         {children}
+        <Footer />
         <PrismicPreview repositoryName={repositoryName} />
       </body>
     </html>

@@ -52,6 +52,15 @@
             }
           }
         }
+      },
+      "footer_slogan": {
+        "type": "StructuredText",
+        "config": {
+          "label": "Footer Slogan",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "single": "heading2,heading3"
+        }
       }
     }
   }

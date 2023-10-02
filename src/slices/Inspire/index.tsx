@@ -21,41 +21,46 @@ const Inspire = ({ slice, index }: InspireProps): JSX.Element => {
         width="full"
         data-slice-type={slice.slice_type}
         data-slice-variation={slice.variation}
-        className={cn('relative', { '': index === 0 })}
+        className={cn('relative border-b-8 border-b-color-secondary', {
+          '': index === 0,
+        })}
       >
         <div className="aspect-w-16 aspect-h-9">
           {slice?.primary?.image.url && (
             <PrismicNextImage field={slice.primary.image} fallbackAlt="" />
           )}
         </div>
-        <div className="mt-8">
-          <PrismicRichText
-            field={slice.primary.heading}
-            components={{
-              heading1: ({ children }) => (
-                <Heading
-                  as="h1"
-                  size="7xl"
-                  className="text-center lg:text-center"
-                >
-                  {children}
-                </Heading>
-              ),
-              heading2: ({ children }) => (
-                <Heading
-                  as="h2"
-                  size="5xl"
-                  className="text-center lg:text-center"
-                >
-                  {children}
-                </Heading>
-              ),
-            }}
-          />
-          <div className="prose lg:prose-lg xl:prose-xl mx-auto">
-            <PrismicRichText field={slice.primary.text} />
+        {(isFilled.richText(slice.primary.heading) ||
+          isFilled.richText(slice.primary.text)) && (
+          <div className="mt-8">
+            <PrismicRichText
+              field={slice.primary.heading}
+              components={{
+                heading1: ({ children }) => (
+                  <Heading
+                    as="h1"
+                    size="7xl"
+                    className="text-center lg:text-center"
+                  >
+                    {children}
+                  </Heading>
+                ),
+                heading2: ({ children }) => (
+                  <Heading
+                    as="h2"
+                    size="5xl"
+                    className="text-center lg:text-center"
+                  >
+                    {children}
+                  </Heading>
+                ),
+              }}
+            />
+            <div className="prose lg:prose-lg xl:prose-xl mx-auto">
+              <PrismicRichText field={slice.primary.text} />
+            </div>
           </div>
-        </div>
+        )}
       </Section>
     )
   } else {
@@ -74,6 +79,13 @@ const Inspire = ({ slice, index }: InspireProps): JSX.Element => {
               autoPlay
               loop
               muted
+            />
+          )}
+          {isFilled.image(slice.primary.image) && (
+            <PrismicNextImage
+              field={slice.primary.image}
+              fallbackAlt=""
+              className="lg:hidden"
             />
           )}
         </div>
