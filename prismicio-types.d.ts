@@ -70,7 +70,10 @@ export type HomepageDocument<Lang extends string = string> =
     Lang
   >
 
-type PageDocumentDataSlicesSlice = ImageWithTextSlice | InspireSlice
+type PageDocumentDataSlicesSlice =
+  | ContentSlice
+  | ImageWithTextSlice
+  | InspireSlice
 
 /**
  * Content for Page documents
@@ -142,6 +145,101 @@ interface PageDocumentData {
  */
 export type PageDocument<Lang extends string = string> =
   prismic.PrismicDocumentWithUID<Simplify<PageDocumentData>, 'page', Lang>
+
+type PostDocumentDataSlicesSlice = ContentSlice | ImageWithTextSlice
+
+/**
+ * Content for Post documents
+ */
+interface PostDocumentData {
+  /**
+   * Title field in *Post*
+   *
+   * - **Field Type**: Title
+   * - **Placeholder**: *None*
+   * - **API ID Path**: post.title
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  title: prismic.TitleField
+
+  /**
+   * Date Published field in *Post*
+   *
+   * - **Field Type**: Date
+   * - **Placeholder**: Optional override published date
+   * - **API ID Path**: post.date_published
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#date
+   */
+  date_published: prismic.DateField
+
+  /**
+   * Excerpt field in *Post*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: post.excerpt
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  excerpt: prismic.KeyTextField
+
+  /**
+   * Slice Zone field in *Post*
+   *
+   * - **Field Type**: Slice Zone
+   * - **Placeholder**: *None*
+   * - **API ID Path**: post.slices[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#slices
+   */
+  slices: prismic.SliceZone<PostDocumentDataSlicesSlice>
+  /**
+   * Meta Description field in *Post*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: A brief summary of the page
+   * - **API ID Path**: post.meta_description
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  meta_description: prismic.KeyTextField
+
+  /**
+   * Meta Image field in *Post*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: post.meta_image
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  meta_image: prismic.ImageField<never>
+
+  /**
+   * Meta Title field in *Post*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: A title of the page used for social media and search engines
+   * - **API ID Path**: post.meta_title
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  meta_title: prismic.KeyTextField
+}
+
+/**
+ * Post document from Prismic
+ *
+ * - **API ID**: `post`
+ * - **Repeatable**: `true`
+ * - **Documentation**: https://prismic.io/docs/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type PostDocument<Lang extends string = string> =
+  prismic.PrismicDocumentWithUID<Simplify<PostDocumentData>, 'post', Lang>
 
 /**
  * Item in *Settings → Navigation*
@@ -247,7 +345,50 @@ export type SettingsDocument<Lang extends string = string> =
 export type AllDocumentTypes =
   | HomepageDocument
   | PageDocument
+  | PostDocument
   | SettingsDocument
+
+/**
+ * Primary content in *Content → Primary*
+ */
+export interface ContentSliceDefaultPrimary {
+  /**
+   * Content field in *Content → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: content.primary.content
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  content: prismic.RichTextField
+}
+
+/**
+ * Default variation for Content Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type ContentSliceDefault = prismic.SharedSliceVariation<
+  'default',
+  Simplify<ContentSliceDefaultPrimary>,
+  never
+>
+
+/**
+ * Slice variation for *Content*
+ */
+type ContentSliceVariation = ContentSliceDefault
+
+/**
+ * Content Shared Slice
+ *
+ * - **API ID**: `content`
+ * - **Description**: Content
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type ContentSlice = prismic.SharedSlice<'content', ContentSliceVariation>
 
 /**
  * Primary content in *ImageWithText → Primary*
@@ -461,10 +602,17 @@ declare module '@prismicio/client' {
       PageDocument,
       PageDocumentData,
       PageDocumentDataSlicesSlice,
+      PostDocument,
+      PostDocumentData,
+      PostDocumentDataSlicesSlice,
       SettingsDocument,
       SettingsDocumentData,
       SettingsDocumentDataNavigationItem,
       AllDocumentTypes,
+      ContentSlice,
+      ContentSliceDefaultPrimary,
+      ContentSliceVariation,
+      ContentSliceDefault,
       ImageWithTextSlice,
       ImageWithTextSliceDefaultPrimary,
       ImageWithTextSliceVariation,

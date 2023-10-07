@@ -1,6 +1,6 @@
 {
-  "id": "page",
-  "label": "Page",
+  "id": "post",
+  "label": "Post",
   "format": "page",
   "repeatable": true,
   "status": true,
@@ -21,6 +21,20 @@
         },
         "type": "UID"
       },
+      "date_published": {
+        "type": "Date",
+        "config": {
+          "label": "Date Published",
+          "placeholder": "Optional override published date"
+        }
+      },
+      "excerpt": {
+        "type": "Text",
+        "config": {
+          "label": "Excerpt",
+          "placeholder": ""
+        }
+      },
       "slices": {
         "type": "Slices",
         "fieldset": "Slice Zone",
@@ -30,9 +44,6 @@
               "type": "SharedSlice"
             },
             "image_with_text": {
-              "type": "SharedSlice"
-            },
-            "inspire": {
               "type": "SharedSlice"
             }
           }
