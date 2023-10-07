@@ -22,21 +22,21 @@
     "react-icons": "^4.11.0"
   },
   "devDependencies": {
-    "@slicemachine/adapter-next": "latest",
+    "@slicemachine/adapter-next": "0.3.19",
     "@tailwindcss/aspect-ratio": "latest",
     "@tailwindcss/typography": "latest",
-    "clsx": "latest",
-    "concurrently": "latest",
-    "schema-dts": "latest",
-    "tailwind-merge": "latest",
     "@types/node": "latest",
     "@types/react": "latest",
     "@types/react-dom": "latest",
     "autoprefixer": "latest",
+    "clsx": "latest",
+    "concurrently": "latest",
     "eslint": "latest",
     "eslint-config-next": "latest",
     "postcss": "latest",
+    "schema-dts": "latest",
     "slice-machine-ui": "latest",
+    "tailwind-merge": "latest",
     "tailwindcss": "latest",
     "typescript": "latest"
   }
