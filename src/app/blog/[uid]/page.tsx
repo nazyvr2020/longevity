@@ -9,7 +9,6 @@ import { Graph } from 'schema-dts'
 type Params = { uid: string }
 
 export default async function Page({ params }: { params: Params }) {
-  console.log('blog post says => ', params.uid)
   const client = createClient()
   const page = await client.getByUID('post', params.uid).catch(() => notFound())
   const settings = await client.getSingle('settings')
