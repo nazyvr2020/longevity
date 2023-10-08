@@ -10,7 +10,7 @@ export default async function Header() {
   const settings = await client.getSingle('settings')
   const { navigation } = settings.data
   return (
-    <Section as="header" width="xl" className="p-6">
+    <Section as="header" width="xl" className="p-4 lg:p-6">
       <div className="flex items-center justify-between">
         <Link href="/">
           <Logo className="h-[50px]" />

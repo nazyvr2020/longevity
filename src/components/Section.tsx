@@ -5,7 +5,7 @@ type SectionProps = {
   as?: React.ElementType
   className?: string
   children: React.ReactNode
-  width?: 'full' | '2xl' | 'xl' | 'lg'
+  width?: 'full' | '2xl' | 'xl' | 'lg' | 'md'
 }
 
 export default function Section({
@@ -18,11 +18,12 @@ export default function Section({
   return (
     <Comp className={cn('', className)} {...restProps}>
       <div
-        className={cn('mx-auto py-12', {
+        className={cn('mx-auto', {
           'w-full px-0 md:px-0 py-0 md:py-0 lg:py-0': width === 'full',
           'max-w-screen-2xl': width === '2xl',
           'max-w-screen-xl': width === 'xl',
           'max-w-screen-lg': width === 'lg',
+          'max-w-screen-md': width === 'md',
         })}
       >
         {children}
