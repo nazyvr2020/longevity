@@ -74,12 +74,20 @@ const Inspire = ({ slice, index }: InspireProps): JSX.Element => {
         <div className="aspect-w-16 aspect-h-9">
           {isFilled.linkToMedia(slice.primary.video) && (
             <video
-              src={slice.primary.video.url}
               className="hidden lg:block "
+              playsInline
               autoPlay
               loop
               muted
-            />
+              controls
+            >
+              <source
+                src={slice.primary.video.url}
+                type="video/mp4"
+                media="(min-width: 1024px)"
+              />
+              <p>Your browser does not support the video element.</p>
+            </video>
           )}
           {isFilled.image(slice.primary.image) && (
             <PrismicNextImage
