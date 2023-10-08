@@ -21,7 +21,7 @@ const Inspire = ({ slice, index }: InspireProps): JSX.Element => {
         width="full"
         data-slice-type={slice.slice_type}
         data-slice-variation={slice.variation}
-        className={cn('relative border-b-8 border-b-color-secondary', {
+        className={cn('relative', {
           '': index === 0,
         })}
       >
