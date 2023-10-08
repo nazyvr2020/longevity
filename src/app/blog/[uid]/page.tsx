@@ -17,6 +17,28 @@ export default async function Page({ params }: { params: Params }) {
   const client = createClient()
   const page = await client.getByUID('post', params.uid).catch(() => notFound())
   const settings = await client.getSingle('settings')
+  let pubDate
+  page.data.date_published
+    ? (pubDate = new Date(page.data.date_published).toLocaleDateString(
+        'en-CA',
+        {
+          weekday: 'long',
+          month: 'long',
+          day: '2-digit',
+          year: 'numeric',
+          timeZone: 'UTC',
+        }
+      ))
+    : (pubDate = new Date(page.first_publication_date).toLocaleDateString(
+        'en-CA',
+        {
+          weekday: 'long',
+          month: 'long',
+          day: '2-digit',
+          year: 'numeric',
+          timeZone: 'UTC',
+        }
+      ))
   const jsonLd: Graph = {
     '@context': 'https://schema.org',
     '@graph': [
@@ -51,32 +73,31 @@ export default async function Page({ params }: { params: Params }) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <Section
-        className={cn('relative py-36 flex justify-center items-center', {
-          'bg-color-neutral': prismic.isFilled.image(page.data.meta_image),
-          'bg-color-primary': !prismic.isFilled.image(page.data.meta_image),
-        })}
+        className={cn(
+          'relative py-36 lg:py-44 xl:py-56 2xl:py-72 flex justify-center items-center bg-color-primary'
+        )}
       >
         {prismic.isFilled.image(page.data.meta_image) && (
           <PrismicNextImage
             field={page.data.meta_image}
             fill
             sizes="45vw"
-            className="absolute inset-0 object-cover opacity-20"
+            className="absolute inset-0 object-cover opacity-10"
           />
         )}
-        <div className="flex flex-col z-20 max-w-lg mx-auto">
+        <div className="flex flex-col z-20 max-w-screen-sm mx-auto">
           <PrismicRichText
             field={page.data.title}
             components={{
               heading1: ({ children }) => (
-                <Heading as="h1" size="5xl" className="text-color-base z-10">
+                <Heading as="h1" size="7xl" className="text-color-base z-10">
                   {children}
                 </Heading>
               ),
             }}
           />
-          <p className="text-xs z-10 text-color-base text-center">
-            {page.first_publication_date}
+          <p className="text-sm uppercase font-medium z-10 text-color-base text-center">
+            {pubDate}
           </p>
         </div>
       </Section>

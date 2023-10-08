@@ -3,10 +3,9 @@ import { cn } from '@/lib/utils/cn'
 import { PostDocument } from '../../prismicio-types'
 import Link from 'next/link'
 import { PrismicNextImage } from '@prismicio/next'
-import { isFilled } from '@prismicio/client'
+import { asText, isFilled } from '@prismicio/client'
 import Heading from './Heading'
 import { PrismicRichText } from './PrismicRichText'
-import postcss from 'postcss'
 
 type BlogCardProps = {
   as?: React.ElementType
