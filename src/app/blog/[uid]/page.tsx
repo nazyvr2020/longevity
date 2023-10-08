@@ -55,13 +55,18 @@ export default async function Page({ params }: { params: Params }) {
         url: 'https://longevityicon.com',
       },
       {
-        '@type': 'WebPage',
-        '@id': `https://longevityicon.com${page.url}` || undefined,
+        '@type': 'BlogPosting',
+        '@id': `https://longevity.com${page.url}/#post`,
+        headline: prismic.asText(page.data.title),
         description:
           page.data.excerpt || page.data.meta_description || undefined,
+        mainEntityOfPage: `https://longevity.com${page.url}`,
+        datePublished: page.data.date_published || page.first_publication_date,
+        dateModified: page.last_publication_date || undefined,
         author: {
           '@id': 'https://longevityicon.com/#naz',
         },
+        image: page.data.meta_image.url || undefined,
       },
     ],
   }
