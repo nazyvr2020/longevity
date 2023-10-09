@@ -14,7 +14,7 @@ export default async function Page() {
     '@graph': [
       {
         '@type': 'Person',
-        '@id': 'https://longevityicon.com/#naz',
+        '@id': `https://${settings.data.domain}/#naz`,
         name: 'Naz',
         description: settings.data.site_meta_description || '',
       },
