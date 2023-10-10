@@ -44,27 +44,27 @@ export default async function Page({ params }: { params: Params }) {
     '@graph': [
       {
         '@type': 'Person',
-        '@id': 'https://longevityicon.com/#naz',
+        '@id': `https://${settings.data.domain}/#naz`,
         name: 'Naz',
         description: settings.data.site_meta_description || undefined,
       },
       {
         '@type': 'WebSite',
-        '@id': 'https://longevityicon.com/#website',
+        '@id': `https://${settings.data.domain}/#website`,
         name: 'Longevity Icon',
         url: 'https://longevityicon.com',
       },
       {
         '@type': 'BlogPosting',
-        '@id': `https://longevity.com${page.url}/#post`,
+        '@id': `https://${settings.data.domain}${page.url}/#post`,
         headline: prismic.asText(page.data.title),
         description:
           page.data.excerpt || page.data.meta_description || undefined,
-        mainEntityOfPage: `https://longevity.com${page.url}`,
+        mainEntityOfPage: `https://${settings.data.domain}${page.url}`,
         datePublished: page.data.date_published || page.first_publication_date,
         dateModified: page.last_publication_date || undefined,
         author: {
-          '@id': 'https://longevityicon.com/#naz',
+          '@id': `https://${settings.data.domain}/#naz`,
         },
         image: page.data.meta_image.url || undefined,
       },
