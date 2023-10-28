@@ -84,6 +84,13 @@
           "label": "Footer Email",
           "placeholder": ""
         }
+      },
+      "footer_button_text": {
+        "type": "Text",
+        "config": {
+          "label": "Footer Button Text",
+          "placeholder": ""
+        }
       }
     }
   }

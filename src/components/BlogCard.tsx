@@ -22,8 +22,8 @@ export default function BlogCard({
   return (
     <Comp
       className={cn(
-        'block rounded-lg border border-color-secondary my-8 lg:my-12',
-        className
+        'my-8 block rounded-lg border border-color-secondary lg:my-12',
+        className,
       )}
       {...restProps}
     >

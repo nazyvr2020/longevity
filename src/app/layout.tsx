@@ -52,7 +52,7 @@ export default function RootLayout({
         className={clsx(
           montserrat.variable,
           openSans.variable,
-          `font-opensans text-color-neutral`
+          `font-opensans text-color-neutral`,
         )}
       >
         <Header />

@@ -184,6 +184,18 @@ interface PostDocumentData {
   excerpt: prismic.KeyTextField
 
   /**
+   * Show Disclaimer field in *Post*
+   *
+   * - **Field Type**: Boolean
+   * - **Placeholder**: *None*
+   * - **Default Value**: true
+   * - **API ID Path**: post.show_disclaimer
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#boolean
+   */
+  show_disclaimer: prismic.BooleanField
+
+  /**
    * Slice Zone field in *Post*
    *
    * - **Field Type**: Slice Zone
@@ -354,6 +366,17 @@ interface SettingsDocumentData {
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
   footer_email: prismic.KeyTextField
+
+  /**
+   * Footer Button Text field in *Settings*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: settings.footer_button_text
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  footer_button_text: prismic.KeyTextField
 }
 
 /**

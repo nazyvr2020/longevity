@@ -9,7 +9,7 @@
     "start": "next start",
     "lint": "next lint",
     "slicemachine": "start-slicemachine",
-    "format": "prettier --write ."
+    "format": "bunx prettier --write ."
   },
   "dependencies": {
     "@headlessui/react": "latest",
@@ -34,6 +34,8 @@
     "eslint": "latest",
     "eslint-config-next": "latest",
     "postcss": "latest",
+    "prettier": "^3.0.3",
+    "prettier-plugin-tailwindcss": "^0.5.6",
     "schema-dts": "latest",
     "slice-machine-ui": "latest",
     "tailwind-merge": "latest",

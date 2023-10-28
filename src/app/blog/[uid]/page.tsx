@@ -6,7 +6,7 @@ import { createClient } from '@/prismicio'
 import { components } from '@/slices'
 import { Graph } from 'schema-dts'
 import Section from '@/components/Section'
-import { PrismicNextImage } from '@prismicio/next'
+import { PrismicNextImage, PrismicNextLink } from '@prismicio/next'
 import { cn } from '@/lib/utils/cn'
 import { PrismicRichText } from '@/components/PrismicRichText'
 import Heading from '@/components/Heading'
@@ -27,7 +27,7 @@ export default async function Page({ params }: { params: Params }) {
           day: '2-digit',
           year: 'numeric',
           timeZone: 'UTC',
-        }
+        },
       ))
     : (pubDate = new Date(page.first_publication_date).toLocaleDateString(
         'en-CA',
@@ -37,7 +37,7 @@ export default async function Page({ params }: { params: Params }) {
           day: '2-digit',
           year: 'numeric',
           timeZone: 'UTC',
-        }
+        },
       ))
   const jsonLd: Graph = {
     '@context': 'https://schema.org',
@@ -79,7 +79,7 @@ export default async function Page({ params }: { params: Params }) {
       />
       <Section
         className={cn(
-          'relative py-36 lg:py-44 xl:py-56 2xl:py-72 flex justify-center items-center bg-color-primary'
+          'relative flex items-center justify-center bg-color-primary py-36 lg:py-44 xl:py-56 2xl:py-72',
         )}
       >
         {prismic.isFilled.image(page.data.meta_image) && (
@@ -90,23 +90,40 @@ export default async function Page({ params }: { params: Params }) {
             className="absolute inset-0 object-cover opacity-10"
           />
         )}
-        <div className="flex flex-col z-20 max-w-screen-sm mx-auto">
+        <div className="z-20 mx-auto flex max-w-screen-sm flex-col">
           <PrismicRichText
             field={page.data.title}
             components={{
               heading1: ({ children }) => (
-                <Heading as="h1" size="7xl" className="text-color-base z-10">
+                <Heading as="h1" size="7xl" className="z-10 text-color-base">
                   {children}
                 </Heading>
               ),
             }}
           />
-          <p className="text-sm uppercase font-medium z-10 text-color-base text-center">
+          <p className="z-10 text-center text-sm font-medium uppercase text-color-base">
             {pubDate}
           </p>
         </div>
       </Section>
       <SliceZone slices={page.data.slices} components={components} />
+      {page.data.show_disclaimer && (
+        <PrismicRichText
+          field={settings.data.disclaimer}
+          components={{
+            paragraph: ({ children }) => (
+              <p className="mx-auto my-8 max-w-lg rounded border border-color-secondary p-4 text-sm">
+                {children}
+              </p>
+            ),
+            hyperlink: ({ children, node }) => (
+              <PrismicNextLink field={node.data} className="underline hover:no-underline">
+                {children}
+              </PrismicNextLink>
+            ),
+          }}
+        />
+      )}
     </>
   )
 }

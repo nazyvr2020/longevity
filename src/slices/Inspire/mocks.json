@@ -1,124 +1,124 @@
 [
-	{
-		"__TYPE__": "SharedSliceContent",
-		"variation": "default",
-		"primary": {
-			"image": {
-				"origin": {
-					"id": "8wkOcDvnjfM",
-					"url": "https://images.unsplash.com/photo-1616425642460-8496b486ad05?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzc0NjN8MHwxfHNlYXJjaHwxM3x8cGNofGVufDB8fHx8MTY5NjE4NjY4OXww&ixlib=rb-4.0.3&q=85",
-					"width": 5472,
-					"height": 3648
-				},
-				"url": "https://images.unsplash.com/photo-1616425642460-8496b486ad05?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzc0NjN8MHwxfHNlYXJjaHwxM3x8cGNofGVufDB8fHx8MTY5NjE4NjY4OXww&ixlib=rb-4.0.3&q=85",
-				"width": 5472,
-				"height": 3648,
-				"edit": {
-					"background": "transparent",
-					"zoom": 1,
-					"crop": {
-						"x": 0,
-						"y": 0
-					}
-				},
-				"credits": null,
-				"alt": null,
-				"__TYPE__": "ImageContent",
-				"thumbnails": {}
-			},
-			"heading": {
-				"__TYPE__": "StructuredTextContent",
-				"value": [
-					{
-						"type": "heading2",
-						"content": {
-							"text": "THE JOURNEY",
-							"spans": []
-						},
-						"direction": "ltr"
-					}
-				]
-			},
-			"text": {
-				"__TYPE__": "StructuredTextContent",
-				"value": [
-					{
-						"type": "paragraph",
-						"content": {
-							"text": "As a visionary leader, you have embarked on an extraordinary journey filled with challenges, growth and accomplishment. Your remarkable success has prompted you to contemplate the legacy you will leave behind. \n\nHow about extending your lifespan as a legacy? A gift that could transcend generations. The privilege of time allows you to continue having a profound impact on the world and to impart your wisdom to the future generations.",
-							"spans": []
-						},
-						"direction": "ltr"
-					}
-				]
-			}
-		},
-		"items": []
-	},
-	{
-		"__TYPE__": "SharedSliceContent",
-		"variation": "video",
-		"primary": {
-			"video": {
-				"__TYPE__": "LinkContent",
-				"value": {
-					"id": "mock_Media_link",
-					"kind": "image/jpeg",
-					"name": "mock_name",
-					"url": "https://source.unsplash.com/daily",
-					"size": "0",
-					"__TYPE__": "FileLink"
-				}
-			},
-			"heading": {
-				"__TYPE__": "StructuredTextContent",
-				"value": [
-					{
-						"type": "heading2",
-						"content": {
-							"text": "Nearly"
-						}
-					}
-				]
-			},
-			"text": {
-				"__TYPE__": "StructuredTextContent",
-				"value": [
-					{
-						"type": "paragraph",
-						"content": {
-							"text": "Et mollit proident ea ipsum consectetur. Id dolor aliqua exercitation aliquip proident ea anim sunt voluptate enim."
-						}
-					}
-				]
-			},
-			"image": {
-				"__TYPE__": "ImageContent",
-				"origin": {
-					"id": "main",
-					"url": "https://images.unsplash.com/photo-1515378960530-7c0da6231fb1",
-					"width": 5616,
-					"height": 3744
-				},
-				"url": "https://images.unsplash.com/photo-1515378960530-7c0da6231fb1",
-				"width": 5616,
-				"height": 3744,
-				"edit": {
-					"zoom": 1,
-					"crop": {
-						"x": 0,
-						"y": 0
-					},
-					"background": "transparent"
-				},
-				"thumbnails": {}
-			}
-		},
-		"items": [
-			{
-				"__TYPE__": "GroupItemContent",
-				"value": []
-			}
-		]
-	}
+  {
+    "__TYPE__": "SharedSliceContent",
+    "variation": "default",
+    "primary": {
+      "image": {
+        "origin": {
+          "id": "8wkOcDvnjfM",
+          "url": "https://images.unsplash.com/photo-1616425642460-8496b486ad05?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzc0NjN8MHwxfHNlYXJjaHwxM3x8cGNofGVufDB8fHx8MTY5NjE4NjY4OXww&ixlib=rb-4.0.3&q=85",
+          "width": 5472,
+          "height": 3648
+        },
+        "url": "https://images.unsplash.com/photo-1616425642460-8496b486ad05?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzc0NjN8MHwxfHNlYXJjaHwxM3x8cGNofGVufDB8fHx8MTY5NjE4NjY4OXww&ixlib=rb-4.0.3&q=85",
+        "width": 5472,
+        "height": 3648,
+        "edit": {
+          "background": "transparent",
+          "zoom": 1,
+          "crop": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        "credits": null,
+        "alt": null,
+        "__TYPE__": "ImageContent",
+        "thumbnails": {}
+      },
+      "heading": {
+        "__TYPE__": "StructuredTextContent",
+        "value": [
+          {
+            "type": "heading2",
+            "content": {
+              "text": "THE JOURNEY",
+              "spans": []
+            },
+            "direction": "ltr"
+          }
+        ]
+      },
+      "text": {
+        "__TYPE__": "StructuredTextContent",
+        "value": [
+          {
+            "type": "paragraph",
+            "content": {
+              "text": "As a visionary leader, you have embarked on an extraordinary journey filled with challenges, growth and accomplishment. Your remarkable success has prompted you to contemplate the legacy you will leave behind. \n\nHow about extending your lifespan as a legacy? A gift that could transcend generations. The privilege of time allows you to continue having a profound impact on the world and to impart your wisdom to the future generations.",
+              "spans": []
+            },
+            "direction": "ltr"
+          }
+        ]
+      }
+    },
+    "items": []
+  },
+  {
+    "__TYPE__": "SharedSliceContent",
+    "variation": "video",
+    "primary": {
+      "video": {
+        "__TYPE__": "LinkContent",
+        "value": {
+          "id": "mock_Media_link",
+          "kind": "image/jpeg",
+          "name": "mock_name",
+          "url": "https://source.unsplash.com/daily",
+          "size": "0",
+          "__TYPE__": "FileLink"
+        }
+      },
+      "heading": {
+        "__TYPE__": "StructuredTextContent",
+        "value": [
+          {
+            "type": "heading2",
+            "content": {
+              "text": "Nearly"
+            }
+          }
+        ]
+      },
+      "text": {
+        "__TYPE__": "StructuredTextContent",
+        "value": [
+          {
+            "type": "paragraph",
+            "content": {
+              "text": "Et mollit proident ea ipsum consectetur. Id dolor aliqua exercitation aliquip proident ea anim sunt voluptate enim."
+            }
+          }
+        ]
+      },
+      "image": {
+        "__TYPE__": "ImageContent",
+        "origin": {
+          "id": "main",
+          "url": "https://images.unsplash.com/photo-1515378960530-7c0da6231fb1",
+          "width": 5616,
+          "height": 3744
+        },
+        "url": "https://images.unsplash.com/photo-1515378960530-7c0da6231fb1",
+        "width": 5616,
+        "height": 3744,
+        "edit": {
+          "zoom": 1,
+          "crop": {
+            "x": 0,
+            "y": 0
+          },
+          "background": "transparent"
+        },
+        "thumbnails": {}
+      }
+    },
+    "items": [
+      {
+        "__TYPE__": "GroupItemContent",
+        "value": []
+      }
+    ]
+  }
 ]

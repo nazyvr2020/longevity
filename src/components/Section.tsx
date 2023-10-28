@@ -19,7 +19,7 @@ export default function Section({
     <Comp className={cn('', className)} {...restProps}>
       <div
         className={cn('mx-auto', {
-          'w-full px-0 md:px-0 py-0 md:py-0 lg:py-0': width === 'full',
+          'w-full px-0 py-0 md:px-0 md:py-0 lg:py-0': width === 'full',
           'max-w-screen-2xl': width === '2xl',
           'max-w-screen-xl': width === 'xl',
           'max-w-screen-lg': width === 'lg',
