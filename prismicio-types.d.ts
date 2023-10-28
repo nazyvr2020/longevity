@@ -19,8 +19,7 @@ interface HomepageDocumentData {
    * - **Tab**: Main
    * - **Documentation**: https://prismic.io/docs/field#slices
    */
-  slices: prismic.SliceZone<HomepageDocumentDataSlicesSlice>
-  /**
+  slices: prismic.SliceZone<HomepageDocumentDataSlicesSlice> /**
    * Meta Description field in *Homepage*
    *
    * - **Field Type**: Text
@@ -99,8 +98,7 @@ interface PageDocumentData {
    * - **Tab**: Main
    * - **Documentation**: https://prismic.io/docs/field#slices
    */
-  slices: prismic.SliceZone<PageDocumentDataSlicesSlice>
-  /**
+  slices: prismic.SliceZone<PageDocumentDataSlicesSlice> /**
    * Meta Description field in *Page*
    *
    * - **Field Type**: Text
@@ -194,8 +192,7 @@ interface PostDocumentData {
    * - **Tab**: Main
    * - **Documentation**: https://prismic.io/docs/field#slices
    */
-  slices: prismic.SliceZone<PostDocumentDataSlicesSlice>
-  /**
+  slices: prismic.SliceZone<PostDocumentDataSlicesSlice> /**
    * Meta Description field in *Post*
    *
    * - **Field Type**: Text
@@ -326,6 +323,17 @@ interface SettingsDocumentData {
   navigation: prismic.GroupField<Simplify<SettingsDocumentDataNavigationItem>>
 
   /**
+   * Disclaimer field in *Settings*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: settings.disclaimer
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  disclaimer: prismic.RichTextField
+
+  /**
    * Footer Slogan field in *Settings*
    *
    * - **Field Type**: Title
@@ -335,6 +343,17 @@ interface SettingsDocumentData {
    * - **Documentation**: https://prismic.io/docs/field#rich-text-title
    */
   footer_slogan: prismic.TitleField
+
+  /**
+   * Footer Email field in *Settings*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: settings.footer_email
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  footer_email: prismic.KeyTextField
 }
 
 /**
@@ -601,7 +620,7 @@ declare module '@prismicio/client' {
   interface CreateClient {
     (
       repositoryNameOrEndpoint: string,
-      options?: prismic.ClientConfig
+      options?: prismic.ClientConfig,
     ): prismic.Client<AllDocumentTypes>
   }
 
