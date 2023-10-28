@@ -1,61 +1,61 @@
 [
-	{
-		"__TYPE__": "SharedSliceContent",
-		"variation": "default",
-		"primary": {
-			"image": {
-				"origin": {
-					"id": "8bPw733XN-g",
-					"url": "https://images.unsplash.com/photo-1583147610149-78ac5cb5a303?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzc0NjN8MHwxfHNlYXJjaHwxN3x8Y3VybHklMjBoYWlyJTIwZ2lybHxlbnwwfHx8fDE2OTYyMTExMTd8MA&ixlib=rb-4.0.3&q=85",
-					"width": 3238,
-					"height": 4856
-				},
-				"url": "https://images.unsplash.com/photo-1583147610149-78ac5cb5a303?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzc0NjN8MHwxfHNlYXJjaHwxN3x8Y3VybHklMjBoYWlyJTIwZ2lybHxlbnwwfHx8fDE2OTYyMTExMTd8MA&ixlib=rb-4.0.3&q=85",
-				"width": 3238,
-				"height": 4856,
-				"edit": {
-					"background": "transparent",
-					"zoom": 1,
-					"crop": {
-						"x": 0,
-						"y": 0
-					}
-				},
-				"credits": null,
-				"__TYPE__": "ImageContent",
-				"thumbnails": {}
-			},
-			"heading": {
-				"__TYPE__": "StructuredTextContent",
-				"value": [
-					{
-						"type": "heading2",
-						"content": {
-							"text": "BIO",
-							"spans": []
-						},
-						"direction": "ltr"
-					}
-				]
-			},
-			"image_location": {
-				"__TYPE__": "BooleanContent",
-				"value": false
-			},
-			"text": {
-				"__TYPE__": "StructuredTextContent",
-				"value": [
-					{
-						"type": "paragraph",
-						"content": {
-							"text": "When I was a little girl, my wish was to have my parents by my side for as long as possible. Now as an adult, that wish has transformed into a mission. I am committing my life to acquiring expertise in the realm of longevity. The prospect of having my parents enjoy an additional two decades of good health makes it all worthwhile. I am also extending this mission to positively impact the lives of others. Failure is not an option. \n\nPositioned uniquely within the longevity and biotech sphere, my objective is to provide you with the most current solutions. \n\nDrawing from my expertise in Psychology, Fitness and Nutrition, I implement a personalized program tailored to your unique needs and biology. \n\nI invite you to join me on an exciting journey of longevity where I incorporate science based principles to empower you in making informed decisions about your health. My goal is to make it fun, inspiring and achievable to ensure you enjoy the process as much as the outcomes. \n\nCheers to a life filled with vitality! \nNaz",
-							"spans": []
-						},
-						"direction": "ltr"
-					}
-				]
-			}
-		},
-		"items": []
-	}
+  {
+    "__TYPE__": "SharedSliceContent",
+    "variation": "default",
+    "primary": {
+      "image": {
+        "origin": {
+          "id": "8bPw733XN-g",
+          "url": "https://images.unsplash.com/photo-1583147610149-78ac5cb5a303?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzc0NjN8MHwxfHNlYXJjaHwxN3x8Y3VybHklMjBoYWlyJTIwZ2lybHxlbnwwfHx8fDE2OTYyMTExMTd8MA&ixlib=rb-4.0.3&q=85",
+          "width": 3238,
+          "height": 4856
+        },
+        "url": "https://images.unsplash.com/photo-1583147610149-78ac5cb5a303?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzc0NjN8MHwxfHNlYXJjaHwxN3x8Y3VybHklMjBoYWlyJTIwZ2lybHxlbnwwfHx8fDE2OTYyMTExMTd8MA&ixlib=rb-4.0.3&q=85",
+        "width": 3238,
+        "height": 4856,
+        "edit": {
+          "background": "transparent",
+          "zoom": 1,
+          "crop": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        "credits": null,
+        "__TYPE__": "ImageContent",
+        "thumbnails": {}
+      },
+      "heading": {
+        "__TYPE__": "StructuredTextContent",
+        "value": [
+          {
+            "type": "heading2",
+            "content": {
+              "text": "BIO",
+              "spans": []
+            },
+            "direction": "ltr"
+          }
+        ]
+      },
+      "image_location": {
+        "__TYPE__": "BooleanContent",
+        "value": false
+      },
+      "text": {
+        "__TYPE__": "StructuredTextContent",
+        "value": [
+          {
+            "type": "paragraph",
+            "content": {
+              "text": "When I was a little girl, my wish was to have my parents by my side for as long as possible. Now as an adult, that wish has transformed into a mission. I am committing my life to acquiring expertise in the realm of longevity. The prospect of having my parents enjoy an additional two decades of good health makes it all worthwhile. I am also extending this mission to positively impact the lives of others. Failure is not an option. \n\nPositioned uniquely within the longevity and biotech sphere, my objective is to provide you with the most current solutions. \n\nDrawing from my expertise in Psychology, Fitness and Nutrition, I implement a personalized program tailored to your unique needs and biology. \n\nI invite you to join me on an exciting journey of longevity where I incorporate science based principles to empower you in making informed decisions about your health. My goal is to make it fun, inspiring and achievable to ensure you enjoy the process as much as the outcomes. \n\nCheers to a life filled with vitality! \nNaz",
+              "spans": []
+            },
+            "direction": "ltr"
+          }
+        ]
+      }
+    },
+    "items": []
+  }
 ]

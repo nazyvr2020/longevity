@@ -18,13 +18,13 @@ const ImageWithText = ({ slice }: ImageWithTextProps): JSX.Element => {
   return (
     <Section
       width="xl"
-      className="py-16 px-4 lg:px-0"
+      className="px-4 py-16 lg:px-0"
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
     >
       <div
         className={cn(
-          'grid lg:grid-cols-2 gap-x-16 place-items-center relative'
+          'relative grid place-items-center gap-x-16 lg:grid-cols-2',
         )}
       >
         {isFilled.image(slice.primary.image) && (

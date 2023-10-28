@@ -1,101 +1,101 @@
 [
-	{
-		"__TYPE__": "SharedSliceContent",
-		"variation": "default",
-		"primary": {
-			"content": {
-				"__TYPE__": "StructuredTextContent",
-				"value": [
-					{
-						"type": "heading2",
-						"content": {
-							"text": "Content Slice",
-							"spans": []
-						},
-						"direction": "ltr"
-					},
-					{
-						"type": "paragraph",
-						"content": {
-							"text": "Shortbread candy canes brownie gummi bears candy canes dragée. Sesame snaps cupcake toffee fruitcake cookie cake ice cream pie icing. Gingerbread pie bonbon toffee tootsie roll. Jelly cake brownie gingerbread cheesecake lollipop. Oat cake donut lollipop candy halvah. Chupa chups icing cake soufflé chupa chups icing pie chocolate cake fruitcake. Marshmallow brownie fruitcake muffin carrot cake sweet macaroon oat cake. Liquorice dessert gummi bears. ",
-							"spans": [
-								{
-									"type": "em",
-									"start": 299,
-									"end": 310
-								},
-								{
-									"type": "hyperlink",
-									"start": 134,
-									"end": 145,
-									"data": {
-										"__TYPE__": "ExternalLink",
-										"url": "https://google.com",
-										"target": "_self"
-									}
-								},
-								{
-									"type": "strong",
-									"start": 0,
-									"end": 22
-								}
-							]
-						},
-						"direction": "ltr"
-					},
-					{
-						"type": "embed",
-						"data": {
-							"embed_url": "https://www.youtube.com/watch?v=DrxiNfbr63s",
-							"__TYPE__": "EmbedContent",
-							"type": "video",
-							"version": "1.0",
-							"title": "Introducing Next.js App Router",
-							"author_name": "Vercel",
-							"author_url": "https://www.youtube.com/@VercelHQ",
-							"provider_name": "YouTube",
-							"provider_url": "https://www.youtube.com/",
-							"thumbnail_url": "https://i.ytimg.com/vi/DrxiNfbr63s/hqdefault.jpg",
-							"thumbnail_width": 480,
-							"thumbnail_height": 360,
-							"html": "<iframe width=\"200\" height=\"113\" src=\"https://www.youtube.com/embed/DrxiNfbr63s?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen title=\"Introducing Next.js App Router\"></iframe>",
-							"all": {
-								"embed_url": "https://www.youtube.com/watch?v=DrxiNfbr63s",
-								"type": "video",
-								"version": "1.0",
-								"title": "Introducing Next.js App Router",
-								"author_name": "Vercel",
-								"author_url": "https://www.youtube.com/@VercelHQ",
-								"provider_name": "YouTube",
-								"provider_url": "https://www.youtube.com/",
-								"thumbnail_url": "https://i.ytimg.com/vi/DrxiNfbr63s/hqdefault.jpg",
-								"thumbnail_width": 480,
-								"thumbnail_height": 360,
-								"html": "<iframe width=\"200\" height=\"113\" src=\"https://www.youtube.com/embed/DrxiNfbr63s?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen title=\"Introducing Next.js App Router\"></iframe>",
-								"height": 113,
-								"width": 200
-							}
-						}
-					},
-					{
-						"type": "heading3",
-						"content": {
-							"text": "Sesame Snaps Danish",
-							"spans": []
-						},
-						"direction": "ltr"
-					},
-					{
-						"type": "paragraph",
-						"content": {
-							"text": "Jelly topping jelly beans candy canes oat cake. Marshmallow muffin liquorice powder caramels. Sweet roll tiramisu lollipop carrot cake carrot cake dragée donut jelly beans sugar plum. Jelly beans donut apple pie cupcake candy canes icing lemon drops chocolate cake lollipop. Cookie sweet jelly beans donut toffee brownie. Gummi bears shortbread toffee lemon drops oat cake chupa chups gingerbread chocolate bar chocolate. Fruitcake gingerbread gummi bears candy cotton candy fruitcake apple pie candy gingerbread.",
-							"spans": []
-						},
-						"direction": "ltr"
-					}
-				]
-			}
-		},
-		"items": []
-	}
+  {
+    "__TYPE__": "SharedSliceContent",
+    "variation": "default",
+    "primary": {
+      "content": {
+        "__TYPE__": "StructuredTextContent",
+        "value": [
+          {
+            "type": "heading2",
+            "content": {
+              "text": "Content Slice",
+              "spans": []
+            },
+            "direction": "ltr"
+          },
+          {
+            "type": "paragraph",
+            "content": {
+              "text": "Shortbread candy canes brownie gummi bears candy canes dragée. Sesame snaps cupcake toffee fruitcake cookie cake ice cream pie icing. Gingerbread pie bonbon toffee tootsie roll. Jelly cake brownie gingerbread cheesecake lollipop. Oat cake donut lollipop candy halvah. Chupa chups icing cake soufflé chupa chups icing pie chocolate cake fruitcake. Marshmallow brownie fruitcake muffin carrot cake sweet macaroon oat cake. Liquorice dessert gummi bears. ",
+              "spans": [
+                {
+                  "type": "em",
+                  "start": 299,
+                  "end": 310
+                },
+                {
+                  "type": "hyperlink",
+                  "start": 134,
+                  "end": 145,
+                  "data": {
+                    "__TYPE__": "ExternalLink",
+                    "url": "https://google.com",
+                    "target": "_self"
+                  }
+                },
+                {
+                  "type": "strong",
+                  "start": 0,
+                  "end": 22
+                }
+              ]
+            },
+            "direction": "ltr"
+          },
+          {
+            "type": "embed",
+            "data": {
+              "embed_url": "https://www.youtube.com/watch?v=DrxiNfbr63s",
+              "__TYPE__": "EmbedContent",
+              "type": "video",
+              "version": "1.0",
+              "title": "Introducing Next.js App Router",
+              "author_name": "Vercel",
+              "author_url": "https://www.youtube.com/@VercelHQ",
+              "provider_name": "YouTube",
+              "provider_url": "https://www.youtube.com/",
+              "thumbnail_url": "https://i.ytimg.com/vi/DrxiNfbr63s/hqdefault.jpg",
+              "thumbnail_width": 480,
+              "thumbnail_height": 360,
+              "html": "<iframe width=\"200\" height=\"113\" src=\"https://www.youtube.com/embed/DrxiNfbr63s?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen title=\"Introducing Next.js App Router\"></iframe>",
+              "all": {
+                "embed_url": "https://www.youtube.com/watch?v=DrxiNfbr63s",
+                "type": "video",
+                "version": "1.0",
+                "title": "Introducing Next.js App Router",
+                "author_name": "Vercel",
+                "author_url": "https://www.youtube.com/@VercelHQ",
+                "provider_name": "YouTube",
+                "provider_url": "https://www.youtube.com/",
+                "thumbnail_url": "https://i.ytimg.com/vi/DrxiNfbr63s/hqdefault.jpg",
+                "thumbnail_width": 480,
+                "thumbnail_height": 360,
+                "html": "<iframe width=\"200\" height=\"113\" src=\"https://www.youtube.com/embed/DrxiNfbr63s?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen title=\"Introducing Next.js App Router\"></iframe>",
+                "height": 113,
+                "width": 200
+              }
+            }
+          },
+          {
+            "type": "heading3",
+            "content": {
+              "text": "Sesame Snaps Danish",
+              "spans": []
+            },
+            "direction": "ltr"
+          },
+          {
+            "type": "paragraph",
+            "content": {
+              "text": "Jelly topping jelly beans candy canes oat cake. Marshmallow muffin liquorice powder caramels. Sweet roll tiramisu lollipop carrot cake carrot cake dragée donut jelly beans sugar plum. Jelly beans donut apple pie cupcake candy canes icing lemon drops chocolate cake lollipop. Cookie sweet jelly beans donut toffee brownie. Gummi bears shortbread toffee lemon drops oat cake chupa chups gingerbread chocolate bar chocolate. Fruitcake gingerbread gummi bears candy cotton candy fruitcake apple pie candy gingerbread.",
+              "spans": []
+            },
+            "direction": "ltr"
+          }
+        ]
+      }
+    },
+    "items": []
+  }
 ]

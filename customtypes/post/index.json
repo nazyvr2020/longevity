@@ -35,6 +35,15 @@
           "placeholder": ""
         }
       },
+      "show_disclaimer": {
+        "type": "Boolean",
+        "config": {
+          "label": "Show Disclaimer",
+          "placeholder_false": "Hide",
+          "placeholder_true": "Show",
+          "default_value": true
+        }
+      },
       "slices": {
         "type": "Slices",
         "fieldset": "Slice Zone",

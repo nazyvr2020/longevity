@@ -38,7 +38,7 @@ export async function generateMetadata(): Promise<Metadata> {
   const settings = await client.getSingle('settings')
   return {
     title: `${page.data.meta_title} • ${prismic.asText(
-      settings.data.site_title
+      settings.data.site_title,
     )}`,
     description:
       page.data.meta_description || settings.data.site_meta_description,

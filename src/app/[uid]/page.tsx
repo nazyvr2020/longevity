@@ -66,7 +66,7 @@ export default async function Page({
                   <BlogCard
                     key={post.id}
                     post={post}
-                    className="max-w-xl mx-auto"
+                    className="mx-auto max-w-xl"
                   />
                 )
               })}

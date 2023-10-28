@@ -25,7 +25,7 @@ const Inspire = ({ slice, index }: InspireProps): JSX.Element => {
           '': index === 0,
         })}
       >
-        <div className="aspect-w-16 aspect-h-9">
+        <div className="aspect-h-9 aspect-w-16">
           {slice?.primary?.image.url && (
             <PrismicNextImage field={slice.primary.image} fallbackAlt="" />
           )}
@@ -56,7 +56,7 @@ const Inspire = ({ slice, index }: InspireProps): JSX.Element => {
                 ),
               }}
             />
-            <div className="prose lg:prose-lg xl:prose-xl mx-auto">
+            <div className="prose mx-auto lg:prose-lg xl:prose-xl">
               <PrismicRichText field={slice.primary.text} />
             </div>
           </div>
@@ -71,16 +71,9 @@ const Inspire = ({ slice, index }: InspireProps): JSX.Element => {
         data-slice-variation={slice.variation}
         className={cn('relative', { '': index === 0 })}
       >
-        <div className="aspect-w-16 aspect-h-9">
+        <div className="aspect-h-9 aspect-w-16">
           {isFilled.linkToMedia(slice.primary.video) && (
-            <video
-              className="hidden lg:block "
-              playsInline
-              autoPlay
-              loop
-              muted
-              controls
-            >
+            <video className="hidden lg:block " playsInline autoPlay loop muted>
               <source
                 src={slice.primary.video.url}
                 type="video/mp4"
@@ -121,7 +114,7 @@ const Inspire = ({ slice, index }: InspireProps): JSX.Element => {
               ),
             }}
           />
-          <div className="prose lg:prose-lg xl:prose-xl mx-auto">
+          <div className="prose mx-auto lg:prose-lg xl:prose-xl">
             <PrismicRichText field={slice.primary.text} />
           </div>
         </div>

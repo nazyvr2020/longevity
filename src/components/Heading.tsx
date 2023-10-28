@@ -18,7 +18,7 @@ export default function Heading({
   return (
     <Comp
       className={cn(
-        'font-playfair font-bold text-center text-color-primary',
+        'font-playfair text-center font-bold text-color-primary',
         className,
         {
           'text-5xl leading-[4rem] lg:text-7xl lg:leading-[6rem]':
@@ -31,7 +31,7 @@ export default function Heading({
           'text-xl lg:text-3xl': size === '3xl',
           'text-lg': size === '2xl',
           'text-base': size === 'xl',
-        }
+        },
       )}
       {...restProps}
     >

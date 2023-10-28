@@ -60,6 +60,15 @@
           }
         }
       },
+      "disclaimer": {
+        "type": "StructuredText",
+        "config": {
+          "label": "Disclaimer",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+        }
+      },
       "footer_slogan": {
         "type": "StructuredText",
         "config": {
@@ -67,6 +76,20 @@
           "placeholder": "",
           "allowTargetBlank": true,
           "single": "heading2,heading3"
+        }
+      },
+      "footer_email": {
+        "type": "Text",
+        "config": {
+          "label": "Footer Email",
+          "placeholder": ""
+        }
+      },
+      "footer_button_text": {
+        "type": "Text",
+        "config": {
+          "label": "Footer Button Text",
+          "placeholder": ""
         }
       }
     }

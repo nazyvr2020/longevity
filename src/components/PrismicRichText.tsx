@@ -52,7 +52,7 @@ const defaultComponents: JSXMapSerializer = {
   },
   paragraph: ({ children }) => {
     return (
-      <p className="prose my-6 mx-auto text-color-neutral lg:prose-lg xl:prose-xl lg:my-10">
+      <p className="prose mx-auto my-6 text-color-neutral lg:prose-lg xl:prose-xl lg:my-10">
         {children}
       </p>
     )
@@ -70,7 +70,8 @@ const defaultComponents: JSXMapSerializer = {
 }
 
 export const PrismicRichText = function PrismicRichText<
-  LinkResolverFunction extends prismic.LinkResolverFunction<any> = prismic.LinkResolverFunction
+  LinkResolverFunction extends
+    prismic.LinkResolverFunction<any> = prismic.LinkResolverFunction,
 >({ components, ...props }: PrismicRichTextProps<LinkResolverFunction>) {
   return (
     <BasePrismicRichText
