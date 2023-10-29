@@ -27,7 +27,11 @@ const Inspire = ({ slice, index }: InspireProps): JSX.Element => {
       >
         <div className="aspect-h-9 aspect-w-16">
           {slice?.primary?.image.url && (
-            <PrismicNextImage field={slice.primary.image} fallbackAlt="" />
+            <PrismicNextImage
+              field={slice.primary.image}
+              fallbackAlt=""
+              priority={index === 0}
+            />
           )}
         </div>
         {(isFilled.richText(slice.primary.heading) ||
