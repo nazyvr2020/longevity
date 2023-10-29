@@ -33,7 +33,7 @@ export default async function Footer() {
       {isFilled.keyText(settings.data.footer_email) && (
         <a
           href={`mailto:${settings.data.footer_email}`}
-          className="inline-block rounded bg-color-secondary px-6 pb-2 pt-2.5 text-sm font-medium uppercase leading-normal text-color-primary transition duration-150 ease-in hover:shadow hover:shadow-amber-500"
+          className="inline-block rounded bg-color-base px-6 pb-2 pt-2.5 text-sm font-medium uppercase leading-normal text-color-primary transition duration-150 ease-in hover:shadow hover:shadow-amber-500"
         >
           {settings.data.footer_button_text || 'Contact Me'}
         </a>
@@ -41,7 +41,9 @@ export default async function Footer() {
       <p className="pb-16 pt-28">
         &copy; {new Date().getFullYear()} Longevity Icon
       </p>
-      <Link href={'/disclaimer'} className='text-sm text-color-secondary my-6'>Disclaimer</Link>
+      <Link href={'/disclaimer'} className="my-6 text-sm text-color-base">
+        Disclaimer
+      </Link>
     </footer>
   )
 }
