@@ -88,6 +88,7 @@ export default async function Page({ params }: { params: Params }) {
             fill
             sizes="45vw"
             className="absolute inset-0 object-cover opacity-10"
+            priority
           />
         )}
         <div className="z-20 mx-auto flex max-w-screen-sm flex-col">
@@ -117,7 +118,10 @@ export default async function Page({ params }: { params: Params }) {
               </p>
             ),
             hyperlink: ({ children, node }) => (
-              <PrismicNextLink field={node.data} className="underline hover:no-underline">
+              <PrismicNextLink
+                field={node.data}
+                className="underline hover:no-underline"
+              >
                 {children}
               </PrismicNextLink>
             ),
